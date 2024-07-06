@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Second Semester 2023 past questions{% endblock %}
+
+{% block content %}
+<h2> CMP 2023 Second Semester Past questions </h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

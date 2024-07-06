@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}First Semester 2023 past questions{% endblock %}
+
+{% block content %}
+<h2> 2023 first Semester Past questions </h2>
+<p>Content for First Semester 2023 past questions.</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+{% endblock %}
+
+
+
+{% comment %} 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+{% endcomment %}

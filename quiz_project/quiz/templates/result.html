@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+</head>
+<body>
+    <h1>Quiz Results</h1>
+    <p> Hello {{ name }} you got  {{ score }} / {{ total }}</p>
+
+    {% if failed_questions %}
+        <h2>Incorrect Answers and their correct Answer</h2>
+        <ul>
+        {% for question in failed_questions %}
+            <li>
+                <p>{{ question.question }}</p>
+                <p>Your Answer: {{ question.your_answer }}</p>
+                <p>Correct Answer: {{ question.correct_answer }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
